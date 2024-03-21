@@ -418,7 +418,6 @@ dependencies = [
  "prost",
  "tokio",
  "tonic",
- "tonic-build",
 ]
 
 [[package]]
@@ -1343,8 +1342,6 @@ dependencies = [
 name = "teonite-task"
 version = "0.1.0"
 dependencies = [
- "prost",
- "tonic",
  "tonic-build",
 ]
 

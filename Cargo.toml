@@ -10,10 +10,11 @@ members = [
     "grpc-server",
 ]
 
-
-[dependencies]
-tonic = "0.11"
-prost = "0.12"
-
 [build-dependencies]
 tonic-build = "0.11"
+
+
+[workspace.dependencies]
+tonic = "0.11"
+prost = "0.12"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
