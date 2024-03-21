@@ -1,11 +1,13 @@
-FROM rust:1.70
+FROM rust:1.71
 
 WORKDIR /usr/src/teonite-task
 COPY . .
 
+RUN apt update
+RUN apt install -y openssl protobuf-compiler libprotobuf-dev
 
-RUN cargo build --release
+RUN cargo build --workspace --release
 
-EXPOSE 8080
+EXPOSE 8000
 
-CMD ["./target/release/teonite-task"]
+CMD ["./spinup.sh"]
